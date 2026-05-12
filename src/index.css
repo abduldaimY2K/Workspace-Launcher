@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,900;1,900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-eva: "Crimson Pro", serif;
+  --font-eva-matisse: "Times New Roman", "Times", serif;
+
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background-color: #09090b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+@theme {
+  --font-eva: var(--font-eva);
+  --font-eva-matisse: var(--font-eva-matisse);
+}

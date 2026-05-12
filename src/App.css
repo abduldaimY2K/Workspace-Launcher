@@ -1,0 +1,33 @@
+@reference "tailwindcss";
+
+.app-card {
+  @apply border-2 border-black cursor-pointer transition-all duration-200 ease-in-out transform;
+}
+
+.app-card:hover,
+.app-card.selected {
+  @apply border-[#ff9018] scale-[1.15] z-10;
+  box-shadow: 0 10px 25px rgba(255, 144, 24, 0.3);
+}
+
+.app-card-inner {
+  @apply flex flex-col items-center text-center gap-y-2 border-2 border-[#ff9018] bg-black p-6 w-full transition-all duration-300;
+}
+
+.app-card:hover .app-card-inner,
+.app-card.selected .app-card-inner {
+  @apply bg-[#ff9018] border-black;
+}
+
+.app-card-title {
+  @apply font-mono font-medium text-2xl tracking-tight uppercase text-[#ff9018] transition-colors duration-300;
+}
+
+.app-card:hover .app-card-title,
+.app-card.selected .app-card-title {
+  @apply text-black;
+}
+
+.btn-disable {
+  @apply cursor-not-allowed opacity-50
+}
