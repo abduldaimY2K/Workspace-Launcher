@@ -52,14 +52,19 @@ function App() {
 
   const selectedAppsCount = selectedAppsArr.filter(app => app.Selected).length
 
-  
+
 
   return (
     <div className="flex flex-col w-full min-h-screen p-10">
-      <div className="border-2 border-[#ff9018] w-fit rounded-xl p-4">
-        <span className="justify-center font-eva text-4xl font-black uppercase leading-none text-[#ff9018] tracking-tight scale-x-75 scale-y-200 origin-left">
-          Workspace Launcher
-        </span>
+      <div className="grid grid-cols-2">
+        <div className="border-2 border-[#ff9018] w-fit rounded-xl p-4">
+          <span className="justify-center font-eva text-4xl font-black uppercase leading-none text-[#ff9018] tracking-tight scale-x-75 scale-y-200 origin-left">
+            Workspace Launcher
+          </span>
+        </div>
+        <div className=" p-1 w-max border-2 border-[#ff9018] justify-self-end bg-black">
+          <GreenButton text={` ${selectedAppsCount > 0 ? `Launch ${selectedAppsCount} Apps` : "No app selected"} `} count={selectedAppsCount} />
+        </div>
       </div>
 
       <div className="flex flex-col items-center self-center mt-[15vh] p-5 text-center w-max shadow-[0_0_5px_rgba(92,247,174,0.6)] border-2 border-[#ff9018] scale-120">
@@ -75,9 +80,7 @@ function App() {
           }
 
         </div>
-        <div className="mx-auto mt-5 p-0.5 w-max border-2 border-[#ff9018] item-end bg-black">
-          <GreenButton text={` ${selectedAppsCount > 0 ? `Launch ${selectedAppsCount} Apps` : "No app selected"} `} count={selectedAppsCount} />
-        </div>
+        
       </div>
     </div>
 
