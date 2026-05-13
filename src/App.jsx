@@ -3,26 +3,26 @@ import AppCard from './Components/AppCard.jsx'
 import { useEffect, useState } from "react"
 import './App.css'
 
-// const AppsArr = [
-//   {
-//     Key: "Spotify",
-//     Title: "Spotify",
-//     Icon: "https://cdn-icons-png.flaticon.com/512/2111/2111624.png",
-//     Selected: false
-//   },
-//   {
-//     Key: "Teams",
-//     Title: "Teams",
-//     Icon: "https://cdn-icons-png.flaticon.com/512/906/906349.png",
-//     Selected: false
-//   },
-//   {
-//     Key: "Outlook",
-//     Title: "Outlook",
-//     Icon: "https://cdn-icons-png.flaticon.com/512/732/732223.png",
-//     Selected: false
-//   }
-// ]
+const AppsArr = [
+  {
+    Key: "Spotify",
+    Title: "Spotify",
+    Icon: "https://cdn-icons-png.flaticon.com/512/2111/2111624.png",
+    Selected: false
+  },
+  {
+    Key: "Teams",
+    Title: "Teams",
+    Icon: "https://cdn-icons-png.flaticon.com/512/906/906349.png",
+    Selected: false
+  },
+  {
+    Key: "Outlook",
+    Title: "Outlook",
+    Icon: "https://cdn-icons-png.flaticon.com/512/732/732223.png",
+    Selected: false
+  }
+]
 
 function App() {
   const [selectedAppsArr, setSelectedApp] = useState([]);
@@ -62,8 +62,8 @@ function App() {
             Workspace Launcher
           </span>
         </div>
-        <div className=" p-1 w-max border-2 border-[#ff9018] justify-self-end bg-black">
-          <GreenButton text={` ${selectedAppsCount > 0 ? `Launch ${selectedAppsCount} Apps` : "No app selected"} `} count={selectedAppsCount} />
+        <div className=" p-2 rounded-xl w-max border-2 border-[#ff9018] justify-self-end bg-black">
+          <GreenButton text={` ${selectedAppsCount > 0 ? `Launch ${selectedAppsCount} Apps` : "No app selected"} `} count={selectedAppsCount} onClick={launchSelected}/>
         </div>
       </div>
 

@@ -42,14 +42,13 @@ ipcMain.handle("get-installed-apps", async () => {
 });
 
 ipcMain.handle("launch-app", async (_, appPath) => {
-  alert(Launched)
-  // try {
-  //   await shell.openPath(appPath);
-  //   return true;
-  // } catch (err) {
-  //   console.log("Launch failed:", err);
-  //   return false;
-  // }
+  try {
+    await shell.openPath(appPath);
+    return true;
+  } catch (err) {
+    console.log("Launch failed:", err);
+    return false;
+  }
 });
 
 function createWindow() {
