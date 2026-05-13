@@ -7,7 +7,6 @@ function AppCard({ key, AppTitle, AppIcon, Selected, OnClick }) {
             className={`app-card ${Selected ? "selected" : ""} hover:selected`}
         >
             <div className="app-card-inner">
-                <img src={AppIcon} alt={AppTitle} width="50" height="50" />
 
                 <span className="app-card-title">
                     {AppTitle}
