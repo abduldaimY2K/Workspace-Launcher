@@ -53,8 +53,8 @@ ipcMain.handle("launch-app", async (_, appPath) => {
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 1800,
+    height: 1000,
     webPreferences: {
       preload: path.join(__dirname, "preload.cjs"),
       contextIsolation: true,
@@ -62,7 +62,6 @@ function createWindow() {
     },
   });
   win.setMenu(null);
-  win.webContents.openDevTools();
   win.loadURL("http://localhost:5173");
 }
 
